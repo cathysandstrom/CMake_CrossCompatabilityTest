@@ -18,7 +18,8 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 
 #check if linux (includes raspberry pi)
 if(UNIX AND NOT APPLE)
-    # ¯\_(ツ)_/¯ I shall get to this
+   #Check Build_Instructions/Linux.txt for how to run this project
+   #Linux specific commands can go here
 endif()
 
 #check if windows
