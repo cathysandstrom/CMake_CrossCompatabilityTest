@@ -1,8 +1,8 @@
-Note that these instructions assume you have successfully pulled the project from git.
+Note: that these instructions assume you have successfully pulled the project from git.
 
 Linux Instructions (using ccmake):
     1.  Install cmake using this command in terminal:
-	    sudo apt-get install cmake
+	        sudo apt-get install cmake
 
     2.  Install ccmake using this command in the terminal:
             sudo apt-get install cmake-curses-gui
@@ -15,9 +15,8 @@ Linux Instructions (using ccmake):
             [user]: ${YOUR_PATH}/CMake_CrossCompatabilityTest/build$ ccmake ../
 
     5.  Once it is running, hit c to configure and the program will configure the project.
-        Make sure that the compiler used is g++, you can check this by 
-            toggling advanced mode with [t]
-        If g++ is not listed, quit out of ccmake using [q] and make sure to 
+        Make sure that the compiler used is g++, you can check this by toggling 
+        advanced mode with [t] If g++ is not listed, quit out of ccmake using [q] and make sure to 
         install g++ using the install command below and run ccmake again from step 3. 
             sudo apt-get install g++
                 
@@ -50,6 +49,16 @@ Linux Instructions (using ccmake):
             Hello! I'm saying Class B!
 
             This amazingly complex code shall change the world. (Hello World!)
+
+    Concluding Notes: 
+     -  Set up is finished after steps 1-5, and do not need to be repeated. 
+
+     -  Changes made to the .cpp or .h files mean that you need to remake the executable, 
+        which is done when running the command 'make'. If you are unsure on what to do, 
+        start again from step 6.
+
+     -  If you change the file CMakeFiles.txt, you can remake the make file by calling
+        'cmake ../' again. If you are unsure on what to do, start again from step 5.
 
  These instructions follow this tutorial with the CMakeLists.txt file already made:
  https://youtu.be/HPMvU64RUTY?t=330

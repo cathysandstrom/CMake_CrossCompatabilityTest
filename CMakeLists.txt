@@ -26,8 +26,13 @@ set( SOURCES
     main.cpp
 )
 
+set( HEADERS
+    bin/ClassA.h
+    bin/ClassB.h
+)
+
 #create the executable for the project
-add_executable(${PROJECT_NAME} ${SOURCES})
+add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 
 #check if linux (includes raspberry pi)
 if(UNIX AND NOT APPLE)
@@ -43,6 +48,7 @@ endif()
 
 #check if mac
 if(APPLE)
-    # ¯\_(ツ)_/¯ I shall get to this
+    # Check Build_Instructions/Mac.txt for how to run this project
+	# Windows specific commands can go here
 endif()
 

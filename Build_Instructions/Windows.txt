@@ -43,6 +43,16 @@ Windows Instructions (using Visual Studio 2017(VS-17)):
 		to be ran! 
 		
 	9. 	Run the project using the green arrow in the top bar with 'Local Windows Debugger' next to it. 
+		The output should be be the executed program: (note - this output may be outdated)
+            class A has been created!
+            Hey! Class B was made too!
+            I'm talking class A!
+            Hello! I'm saying Class B!
+
+            This amazingly complex code shall change the world. (Hello World!)
+		You can now run and edit the code! 
+
+	Concluding Notes: 
 	
 These instructions follow this tutorial with the CMakeLists.txt file already made:
 https://cmake.org/runningcmake/
