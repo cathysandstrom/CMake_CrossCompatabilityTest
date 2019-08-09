@@ -119,7 +119,7 @@ Mac Instructions (using xcode):
         repeat steps 6 and 7 with 'ALL_BUILD' selected instead of 'CrossPlatformTutorial'. 
         This will update the executable instead of needing to run cmake in terminal again. 
     
-    -   If you figure out what 'ZERO_CHECK' means as one of the runnable files, update this document. 
+     -  If you figure out what 'ZERO_CHECK' means as one of the runnable files, update this document. 
 
 
 
