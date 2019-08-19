@@ -1,6 +1,15 @@
 * Note that these instructions assume you have successfully pulled the project from git.
 
 # Linux Instructions (using ccmake):
+
+---
+## Requirements
+  * G++ is installed on the machine
+  * Basic uderstanding of how to use terminal
+  * You have cloned the project CMake_CrossCompatabilityTest from [GitHub](https://github.com/cathysandstrom/CMake_CrossCompatabilityTest)
+	- Note that these instructions can work in general cases, but its tailored specifically to this project. 
+----
+
 1.  Install cmake using this command in terminal:
     ```
     sudo apt-get install cmake
@@ -33,7 +42,7 @@ If g++ is not the default option,follow the substeps below. Otherwise, continue 
 	 3.	Press enter once more to confirm your changes. Note that those changes have not been loaded into the configuration just yet, but rather are staged to be configured.     
 
 	 4. Press `[C]` to change the saved configuration. 
-     
+
 	 5. You will be prompted that you have made a change to your default configuration. This should be the message that appears:
          ```
          You have changed variables that require your cache to be deleted.
