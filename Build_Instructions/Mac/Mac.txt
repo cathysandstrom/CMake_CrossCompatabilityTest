@@ -1,0 +1,126 @@
+Note: that these instructions assume you have successfully pulled the project from git
+      and have homebrew installed. 
+
+There are two sets of instructions in here:
+    1. Using CCMake and Terminal    
+        - very similar to the linux instructions, use terminal to compile and run the executable using makefiles.
+        - allows use of any text editor but needs to be ran through terminal directly.
+    2. Using Xcode                 
+        - Starts with the terminal, but only for setup. Edit files, compile, and run the executable through Xcode. 
+        - allows use of xcode specifically without needing to be ran through terminal directly. 
+
+Mac Instructions (using ccmake and terminal):
+    1.  Install cmake using this command in terminal:
+	        sudo brew install cmake
+
+    2.  Open the project folder in terminal and create a folder called build.
+        - NOTE - add this folder to .gitignore if you change the name so it doesnt get pushed into the repo 
+                
+    3.  From the new build folder in terminal, run ccmake using this command:
+            [user]: ${YOUR_PATH}/CMake_CrossCompatabilityTest/build$ ccmake ../
+        ccmake creates an interface for the project you are configuring which comes with cmake. 
+
+    4.  Once it is running, hit c to configure and the program will configure the project.
+        Make sure that the compiler used is g++, you can check this by  toggling 
+        advanced mode with [t] (Note the path is very long as its referenced from xcode). 
+        If g++ is not listed, quit out of ccmake using [q] and make sure to 
+        install g++ which requires the command line developer tools. Simply use the command
+            g++ 
+        into terminal and follow the prompts from there.  
+                
+    5.  Once this is done, press [q] to get out of ccmake. 
+        You should see that new files have been made inside of the build folder.
+        run this command to generate the makefile using cmake:
+            cmake ../
+        The output should be this:
+            -- Configuring done
+            -- Generating done
+            -- Build files have been written to: ${YOUR_PATH}/CMake_CrossCompatabilityTest/build
+
+    6.  The makefile has now been generated within the build folder. 
+        To make the project, simply run make and you will have this output (as of 8/2019)
+            ${YOUR_PATH}/CMake_CrossCompatabilityTest/build$ make
+        The output should be similar to this:
+            Scanning dependencies of target CrossPlatformTutorial
+            [ 25%] Building CXX object CMakeFiles/CrossPlatformTutorial.dir/src/ClassA.cpp.o
+            [ 50%] Building CXX object CMakeFiles/CrossPlatformTutorial.dir/src/ClassB.cpp.o
+            [ 75%] Building CXX object CMakeFiles/CrossPlatformTutorial.dir/main.cpp.o
+            [100%] Linking CXX executable CrossPlatformTutorial
+            [100%] Built target CrossPlatformTutorial
+
+    7.  Run the executable made by the make file using this command:
+            ${YOUR_PATH}/CMake_CrossCompatabilityTest/build$./CrossPlatformTutorial 
+        The output should be be the executed program: (note - this output may be outdated)
+            class A has been created!
+            Hey! Class B was made too!
+            I'm talking class A!
+            Hello! I'm saying Class B!
+
+            This amazingly complex code shall change the world. (Hello World!)
+    
+    Concluding Notes: 
+     -  Set up is finished after steps 1-5, and do not need to be repeated. 
+
+     -  Changes made to the .cpp or .h files mean that you need to remake the executable, 
+        which is done when running the command 'make'. If you are unsure on what to do, 
+        start again from step 6.
+
+     -  If you change the file CMakeFiles.txt, you can remake the make file by calling
+        'cmake ../' again. If you are unsure on what to do, start again from step 5.
+
+Mac Instructions (using xcode):
+    1.  Install cmake using this command in terminal:
+	        sudo brew install cmake
+
+    2.  Open the project folder in terminal and create a folder called build.
+        - NOTE - add this folder to .gitignore if you change the name so it doesnt get 
+                 pushed into the repo 
+                
+    3.  From the new build folder in terminal, run ccmake using this command:
+            [user]: ${YOUR_PATH}/CMake_CrossCompatabilityTest/build$ cmake -G Xcode ../
+    
+    4.  After it's done running, check the folder in Finder. There should be new folders 
+        in there, including a file called 'CrossPlatformTutorial.xcodeproj'. Open this file, 
+        and it will start running xcode. 
+
+    5.  Inside of the file explorer in the left panel of xcode, you will see the project. 
+        Opening it will display three folders; CrossPlatformTutorial, ALL_BUILD, and Products. 
+        Take some time to explore the editor. 
+            + The folder 'CrossPlatformTutorial' contains all of the files used with 
+                the executable, with 'Header Files' containing the .h files and 
+                'Source Files' containing the .cpp files. 
+            + The folder 'ALL_BUILD' contains the file 'CMakeLists.txt'
+            + The folder 'Products' contains the executable made by the make file. 
+            + Other directories and their files that are not included in CMakeLists.txt 
+				are not in the project (For example, Build_Instructions/*).
+    
+    6.  Note that in the top left corner, there is a play button next to a box that says
+        'ALL_BUILD > My Mac'. Running ALL_BUILD will rerun the cmake command if you made 
+        changes to CMakeLists.txt. In order to run the the executable, click ALL_BUILD 
+        in the top corner box (NOT the folder) and select 'CrossPlatformTutorial'. 
+    
+    7.  Click the play button. The terminal result will be displayed in the right-most box
+        under the editor. The output should be be the executed program: (note - may be outdated)
+            class A has been created!
+            Hey! Class B was made too!
+            I'm talking class A!
+            Hello! I'm saying Class B!
+
+            This amazingly complex code shall change the world. (Hello World!)
+        And with that, you now have a working xcode project version of the c++ code!
+    
+    Concluding Notes: 
+     -  Set up is finished after steps 1-4, and do not need to be repeated. 
+
+     -  Changing any of the main directory files will update their corresponding files in
+        the main folder. 
+    
+     -  In order to update the executable with any changes made to CMakeLists.txt, 
+        repeat steps 6 and 7 with 'ALL_BUILD' selected instead of 'CrossPlatformTutorial'. 
+        This will update the executable instead of needing to run cmake in terminal again. 
+    
+     -  If you figure out what 'ZERO_CHECK' means as one of the runnable files, update this document. 
+
+
+
+    

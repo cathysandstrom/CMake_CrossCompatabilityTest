@@ -1,0 +1,60 @@
+*Note: that these instructions assume you have successfully pulled the project from git
+	  and have Visual Studio 15 2017 already installed on your machine. Other VS versions not garunteed.*
+
+**Windows Instructions** (using Visual Studio 2017(VS-17)):
+	1. 	Download and install the cmake gui from their website: 
+			https://cmake.org/download/
+	
+	2. 	Open the folder containing the project from git, and create a new folder called 'build'
+		*- NOTE -* add this folder to .gitignore if you change the name so it doesnt get pushed into the repo 
+	
+	3.	Open the CMake GUI which should be in your Start menu under Program Files or 
+		the location you selected. Select the source code location to be the folder containing 
+		the CMakeLists.txt file and the build the binaries path being the new build folder. 
+			Where is the source code: 		${YOUR_PATH}/CMake_CrossCompatabilityTest
+			Where to build the binaries: 	${YOUR_PATH}/CMake_CrossCompatabilityTest/build
+	
+	4.  Select the configure button on the bottom left. Select Visual Studio 15 2017 
+		as the generator for the project. All other options are ok, so click Finish.
+	
+	5.  Once the program is done being configured, there should be options in red showing the new 
+		configuration options generated. These settings haven't been applied yet, so you need to 
+		select the button Generate to do this. 
+		- NOTE - to change the generated settings and the generator, simply delete the new files 
+				 generated in build folder, and go to the top right of the GUI and select 
+				 'File>Delete Cache'. This will allow you to restart from step 4. 
+
+	6. 	There should be new files inside of the build folder that are configured for a 
+		Visual Studio 2017 project. Double click on the folder called CrossPlatformTutorial.sln
+		to open the project in VS-17.
+		- NOTE - Make sure that C++ has been installed for VS-17 as this is a C++ project. 
+		
+	7.  Inside of the Solution Explorer in VS-17, you will have three projects in the Solution
+		'CrossPlatformTutorial'. The only project you need to reference is called 
+		'CrossPlatformTutorial (Visual Studio 2017)'. Take some time to explore the project:
+			+ Other directories and their files that are not included in CMakeLists.txt 
+				are not in the VS-17 project (For example, Build_Instructions/*).
+			+ The header files (.h) are located in the External Dependencies folder 
+			+ The cpp files (.cpp) are located in the Source Files folder.
+			+ Changes made to the .cpp and .h files are updated in the main directory as well. 
+
+	8.	Right click the project name and select 'Set as StartUp Project' from the drop down menu.
+		This will tell VS-17 which project needs to be built and ran. The project is now ready
+		to be ran! 
+		
+	9. 	Run the project using the green arrow in the top bar with 'Local Windows Debugger' next to it. 
+		The output should be be the executed program: (note - this output may be outdated)
+            ```
+	    class A has been created!
+            Hey! Class B was made too!
+            I'm talking class A!
+            Hello! I'm saying Class B!
+
+            This amazingly complex code shall change the world. (Hello World!)
+	    ```
+		You can now run and edit the code! 
+
+	Concluding Notes: 
+
+These instructions follow this tutorial with the CMakeLists.txt file already made:
+https://cmake.org/runningcmake/
