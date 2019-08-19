@@ -1,5 +1,5 @@
 *Note that these instructions assume you have successfully pulled the project from git
-      and have homebrew installed. 
+      and have homebrew installed.   
       This tutorial also does not cover the creation of the file `CMakeLists.txt`.*
 
 There are two sets of instructions in here:

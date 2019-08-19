@@ -1,5 +1,5 @@
-Note: that these instructions assume you have successfully pulled the project from git
-	  and have Visual Studio 15 2017 already installed on your machine. Other VS versions not garunteed.  
+Note that these instructions assume you have successfully pulled the project from git
+	 and have Visual Studio 15 2017 already installed on your machine. Other VS versions not garunteed.  
 
 ===========================================================================================================
 Windows Instructions (using Visual Studio 2017(VS-17)):

@@ -1,5 +1,6 @@
-Note: that these instructions assume you have successfully pulled the project from git
-      and have homebrew installed. 
+Note that these instructions assume you have successfully pulled the project from git
+     and have homebrew installed. 
+     This tutorial also does not cover the creation of the file 'CMakeLists.txt'.
 
 There are two sets of instructions in here:
     1. Using CCMake and Terminal    
@@ -48,9 +49,8 @@ Requirements
             -- Build files have been written to: ${YOUR_PATH}/CMake_CrossCompatabilityTest/build
 
     6.  The makefile has now been generated within the build folder. 
-        To make the project, simply run make and you will have this output (as of 8/2019)
-            ${YOUR_PATH}/CMake_CrossCompatabilityTest/build$ make
-        The output should be similar to this:
+        To make the project, simply run the command 'make' and you will have 
+        this output (as of 8/2019):
             Scanning dependencies of target CrossPlatformTutorial
             [ 25%] Building CXX object CMakeFiles/CrossPlatformTutorial.dir/src/ClassA.cpp.o
             [ 50%] Building CXX object CMakeFiles/CrossPlatformTutorial.dir/src/ClassB.cpp.o
