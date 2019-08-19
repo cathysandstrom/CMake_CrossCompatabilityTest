@@ -1,4 +1,4 @@
-* Note that these instructions assume you have successfully pulled the project from git.
+*Note that these instructions assume you have successfully pulled the project from git.*
 
 # Linux Instructions (using ccmake):
 
