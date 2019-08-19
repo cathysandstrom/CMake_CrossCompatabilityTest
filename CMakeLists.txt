@@ -36,19 +36,19 @@ add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 
 #check if linux (includes raspberry pi)
 if(UNIX AND NOT APPLE)
-    #Check Build_Instructions/Linux.txt for how to run this project
-    #Linux specific commands can go here
+    #Check Build_Instructions/Linux/Linux.txt for how to run this project
+    	#Linux specific commands can go here
 endif()
 
 #check if windows
 if(WIN32)
-    # Check Build_Instructions/Windows.txt for how to run this project
+    # Check Build_Instructions/Windows/Windows.txt for how to run this project
 	# Windows specific commands can go here
 endif()
 
 #check if mac
 if(APPLE)
-    # Check Build_Instructions/Mac.txt for how to run this project
+    # Check Build_Instructions/Mac/Mac.txt for how to run this project
 	# Windows specific commands can go here
 endif()
 
