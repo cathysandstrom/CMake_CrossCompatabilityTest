@@ -9,7 +9,17 @@ There are two sets of instructions in here:
         - Starts with the terminal, but only for setup. Edit files, compile, and run the executable through Xcode. 
         - allows use of xcode specifically without needing to be ran through terminal directly. 
 
+===========================================================================================================
 Mac Instructions (using ccmake and terminal):
+===========================================================================================================
+-----------------------------------------------------------------------------------------------------------
+Requirements
+  * G++ is installed on the machine
+  * Basic uderstanding of how to use terminal
+  * You have cloned the project CMake_CrossCompatabilityTest from GitHub: 
+        https://github.com/cathysandstrom/CMake_CrossCompatabilityTest
+	Note: these instructions can work in general cases, but its tailored specifically for this project. 
+-----------------------------------------------------------------------------------------------------------
     1.  Install cmake using this command in terminal:
 	        sudo brew install cmake
 
@@ -57,18 +67,29 @@ Mac Instructions (using ccmake and terminal):
             Hello! I'm saying Class B!
 
             This amazingly complex code shall change the world. (Hello World!)
-    
-    Concluding Notes: 
-     -  Set up is finished after steps 1-5, and do not need to be repeated. 
 
-     -  Changes made to the .cpp or .h files mean that you need to remake the executable, 
-        which is done when running the command 'make'. If you are unsure on what to do, 
-        start again from step 6.
+Concluding Notes: 
+    -  Set up is finished after steps 1-5, and do not need to be repeated. 
 
-     -  If you change the file CMakeFiles.txt, you can remake the make file by calling
-        'cmake ../' again. If you are unsure on what to do, start again from step 5.
+    -  Changes made to the .cpp or .h files mean that you need to remake the executable, 
+    which is done when running the command 'make'. If you are unsure on what to do, 
+    start again from step 6.
 
+    -  If you change the file CMakeFiles.txt, you can remake the make file by calling
+    'cmake ../' again. If you are unsure on what to do, start again from step 5.
+
+===========================================================================================================
 Mac Instructions (using xcode):
+===========================================================================================================
+-----------------------------------------------------------------------------------------------------------
+Requirements
+  * G++ is installed on the machine
+  * Basic uderstanding of how to use terminal
+  * XCode is Up to Date and Installed (instructions version: 10.3)
+  * You have cloned the project CMake_CrossCompatabilityTest from GitHub: 
+        https://github.com/cathysandstrom/CMake_CrossCompatabilityTest
+    Note: these instructions can work in general cases, but its tailored specifically to this project. 
+-----------------------------------------------------------------------------------------------------------
     1.  Install cmake using this command in terminal:
 	        sudo brew install cmake
 
@@ -108,18 +129,18 @@ Mac Instructions (using xcode):
 
             This amazingly complex code shall change the world. (Hello World!)
         And with that, you now have a working xcode project version of the c++ code!
-    
-    Concluding Notes: 
-     -  Set up is finished after steps 1-4, and do not need to be repeated. 
 
-     -  Changing any of the main directory files will update their corresponding files in
-        the main folder. 
-    
-     -  In order to update the executable with any changes made to CMakeLists.txt, 
-        repeat steps 6 and 7 with 'ALL_BUILD' selected instead of 'CrossPlatformTutorial'. 
-        This will update the executable instead of needing to run cmake in terminal again. 
-    
-     -  If you figure out what 'ZERO_CHECK' means as one of the runnable files, update this document. 
+Concluding Notes: 
+    -  Set up is finished after steps 1-4, and do not need to be repeated. 
+
+    -  Changing any of the main directory files will update their corresponding files in
+    the main folder. 
+
+    -  In order to update the executable with any changes made to CMakeLists.txt, 
+    repeat steps 6 and 7 with 'ALL_BUILD' selected instead of 'CrossPlatformTutorial'. 
+    This will update the executable instead of needing to run cmake in terminal again. 
+
+    -  If you figure out what 'ZERO_CHECK' means as one of the runnable files, update this document. 
 
 
 
