@@ -11,7 +11,7 @@ Windows Instructions (using Visual Studio 2017(VS-17)):
 	3.	Open the CMake GUI which should be in your Start menu under Program Files or 
 		the location you selected. Select the source code location to be the folder containing 
 		the CMakeLists.txt file and the build the binaries path being the new build folder. 
-			Where is the source code: 		${YOUR_PATH}/CMake_CrossCompatabilityTest
+			Where the source code is: 		${YOUR_PATH}/CMake_CrossCompatabilityTest
 			Where to build the binaries: 	${YOUR_PATH}/CMake_CrossCompatabilityTest/build
 	
 	4.  Select the configure button on the bottom left. Select Visual Studio 15 2017 
