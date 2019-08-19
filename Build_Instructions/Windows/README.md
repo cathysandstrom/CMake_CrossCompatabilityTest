@@ -2,6 +2,7 @@
 	  and have Visual Studio 15 2017 already installed on your machine. Other VS versions not garunteed.*
 
 **Windows Instructions** (using Visual Studio 2017(VS-17)):
+
 	1. 	Download and install the cmake gui from their website: 
 			https://cmake.org/download/
 	
