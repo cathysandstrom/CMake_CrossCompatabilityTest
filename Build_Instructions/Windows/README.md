@@ -1,9 +1,9 @@
 *Note: that these instructions assume you have successfully pulled the project from git
 	  and have Visual Studio 15 2017 already installed on your machine. Other VS versions not garunteed.*
 
-**Windows Instructions** (using Visual Studio 2017(VS-17)):
+**Windows Instructions** (using Visual Studio 2017(VS-17))
 
-	1. 	Download and install the cmake gui from their website: 
+	1. 	Download and install the cmake gui from their website 
 			https://cmake.org/download/
 	
 	2. 	Open the folder containing the project from git, and create a new folder called 'build'
